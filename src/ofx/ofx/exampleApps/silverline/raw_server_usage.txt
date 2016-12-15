@@ -1,0 +1,41 @@
+start mininet:
+sudo mn
+
+starting server and client on mininet:
+
+1) raw server:
+h2 sudo python raw_server.py h2-eth0 10.0.0.2 &
+
+2) udp client:
+h1 sudo python client.py 10.0.0.2 2 1
+
+3) OpenFlow declassifier: (in new window)
+ryu-manager ofdeclassifier.py
+
+or on loopback:
+sudo python raw_server.py lo 127.0.0.1 &
+sudo python client.py 127.0.0.1 2 1
+
+
+
+Usage with ofx declassifier:
+
+1) start mininet
+sudo mn --controller=remote,ip=127.0.0.1,port=9999
+1.1) add a link between the server and the controller.
+-----------------------------------------------
+
+py h2.linkTo(c0)
+h2 ifconfig h2-eth1 11.1.1.1 netmask 255.255.255.0
+c0 ifconfig c0-eth0 11.1.1.2 netmask 255.255.255.0
+
+
+2) start controller (in the refactoredAgent/silverline directory)
+~/ryu/bin/ryu-manager ofxdeclassifier.py
+3) start OFX (in the OFX_mininet directory)
+./mn_startRefAgent.sh
+
+run the server and client inside of mininet:
+-----------------------------------------------
+h2 sudo python raw_server.py h2-eth0 10.0.0.2 &
+h1 sudo python client.py 10.0.0.2 2 1

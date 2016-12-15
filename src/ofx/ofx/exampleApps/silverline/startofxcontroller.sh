@@ -1,0 +1,2 @@
+ryu-manager ofxdeclassifier.py
+

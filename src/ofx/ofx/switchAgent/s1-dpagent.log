@@ -1,0 +1,38 @@
+1481824618: log file opened..
+1481824618: starting generic DP agent.
+1481824620: socket file descriptor: 4
+1481824620: connection to agent failed. retrying.
+1481824621: socket to Agent connected. fd: 4
+1481824621: loading module.
+1481824621: in reload module.
+1481824621: null module startup.
+1481824621: returned from startup function.
+1481824621: opening socket to datapath.
+1481824621: binding to INPUT interface tap1 (via socket)
+1481824621: starting listening loop.
+1481824634: entered sigALARM handler.
+1481824634: in reload module.
+1481824634: runnning data path start up function for botminer module.
+1481824634: returned from startup function.
+1481824634: gathering statistics about flows.
+1481824634: copied 0 flow entries.
+1481824634: 0 flow entries added to asic. (out of 0 attempts)
+1481824644: gathering statistics about flows.
+1481824644: copied 0 flow entries.
+1481824644: 0 flow entries added to asic. (out of 0 attempts)
+1481824654: gathering statistics about flows.
+1481824654: copied 0 flow entries.
+1481824654: 0 flow entries added to asic. (out of 0 attempts)
+1481824664: gathering statistics about flows.
+1481824664: copied 684 flow entries.
+1481824664: 684 flow entries added to asic. (out of 684 attempts)
+1481824674: gathering statistics about flows.
+1481824674: copied 1000 flow entries.
+1481824674: 1000 flow entries added to asic. (out of 1000 attempts)
+1481824684: gathering statistics about flows.
+1481824684: copied 1000 flow entries.
+1481824684: 1000 flow entries added to asic. (out of 1000 attempts)
+1481824694: gathering statistics about flows.
+1481824694: copied 1000 flow entries.
+1481824694: 1000 flow entries added to asic. (out of 1000 attempts)
+1481824700: got sigint.. ignoring.

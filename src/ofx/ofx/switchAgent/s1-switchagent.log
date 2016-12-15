@@ -1,0 +1,8 @@
+1481820517.03: starting Datapath socket.
+1481820517.04: opening socket for DP agent on 22001
+1481820519.04: connection to DP agent made.
+1481820520.04: connection to DP agent broken.
+1481820522.04: listening for switch on: 10001
+1481820522.04: connecting to controller at IP: 127.0.0.1 port: 6633 (retrying every second)
+1481820948.65: 	controller connected.
+1481820948.65: waiting for connection from switch. Listening on port: 10001

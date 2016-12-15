@@ -1,0 +1,32 @@
+This module distributes an OpenFlow packet_in handler 
+to the switches in an OpenFlow network. It somehow detects and 
+synchronizes all the global variables (i.e. those that are 
+modified by multiple switches). Is that even possible? 
+
+What implementation Options are there? 
+
+Design 1:
+forward all packets to the controller, through OFX. 
+- baseline implementation, just to see what its like when 
+using the OFX path
+
+Design 2:
+push the entire packet handler down to the switch.
+- need to rewrite it to use the OFX packet in message.
+- this will probably mangle a lot of applications. 
+	- particularly global state
+
+Design 3: 
+push parts of the packet handler to the switch. 
+- what parts? how to determine?
+
+Design 4: 
+push the entire packet handler down to the switch, 
+but detect which variables are global and then 
+synchronize them. 
+
+Imagine.. Being able to just specify how you want to detect and react to malicious traffic on your network, without needing to worry about any of the implementation or deployment details. 
+- cost modeling (ok, if we use this technique, we can handle this much traffic)
+- distribution of centralized logic
+
+This is kind of like... not imperitive? that other word <other word> network security programming.
