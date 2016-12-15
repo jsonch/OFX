@@ -1,6 +1,6 @@
 working but incomplete OFX implementation that runs on mininet.
 
-vm credentials: ofx/ofx
+vm credentials: user/ofx
 
 Requirements (all pre-installed on the VM):
 1) mininet
@@ -9,10 +9,8 @@ Requirements (all pre-installed on the VM):
 4) twink
 5) dpkt
 sudo apt-get install mininet python-pip
-sudo pip install ryu
-sudo pip install twink
+sudo pip install ryu twink dpkt
 sudo ./patchtwink.sh #local patch to fix a bug in twink.
-sudo pip install dpkt
 
 Directories:
 mininet: code for spawning mininet.
@@ -31,16 +29,17 @@ cd mininet
 sudo python startTopo.py
 
 3) start the OFX switch agent. <in window 2>
-cd switchAgent
+cd ofx/switchAgent
 sudo python setupOfxAgents.py
 # follow instructions to start agent.
-# to stop agents, use ~/ofxcode/ofx/switchAgent/stopAgents.sh
+# to stop agents, use: sudo ~/Desktop/OFX/src/ofx/ofx/switchAgent/stopAgents.sh
 
 4) start an example controller app. <in window 3>
 # botminer is the only one I've tested recently.
 cd ofx/exampleApps/botminer
 sudo ryu-manager ofxbotminer.py
 # the example apps are messy with temp files, copy a bunch of temp files to their current directory. The only important file here is ofxbotminer.py
+# the agent occasionally crashes here when the controller start.
 
 5) in the mininet window, run a script to generate traffic.
 h1 cd hostScripts
